@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TravelBloom - Your Travel Companion</title>
+    <link rel="stylesheet" href="travel_recommendation.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <a href="#" class="navbar-brand" onclick="showHome()">
+            <span class="logo-icon">✈</span> TravelBloom
+        </a>
+        <div class="navbar-links">
+            <a href="#" onclick="showHome(); return false;">Home</a>
+            <a href="#" onclick="showAboutUs(); return false;">About Us</a>
+            <a href="#" onclick="showContactUs(); return false;">Contact Us</a>
+            <div class="search-container" id="searchContainer">
+                <div class="search-input-group">
+                    <input type="text" class="search-input" id="searchInput" placeholder="Enter a destination or keyword">
+                    <button class="btn btn-search" onclick="searchRecommendations()">Search</button>
+                    <button class="btn btn-clear" onclick="clearResults()">Clear</button>
+                </div>
+                <div id="searchMessage" class="search-message hidden"></div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Home Section -->
+    <section id="homeSection" class="home-section">
+        <div class="social-icons-vertical">
+            <a href="#" aria-label="Twitter" class="social-icon">🐦</a>
+            <a href="#" aria-label="Facebook" class="social-icon">📘</a>
+            <a href="#" aria-label="Instagram" class="social-icon">📷</a>
+            <a href="#" aria-label="YouTube" class="social-icon">▶</a>
+        </div>
+        <div class="home-content-wrapper">
+            <div class="home-content">
+                <h1>EXPLORE<br>DREAM<br>DESTINATION</h1>
+                <p>It encourages exploration of unfamiliar territories, embracing diverse cultures and landscapes, while pursuing the desired destination that captivates the heart and ignites a sense of wonder.</p>
+                <button class="btn-book-now" onclick="bookNow()">BOOK NOW</button>
+            </div>
+            <!-- Results Section as Sidebar -->
+            <div id="resultsSection" class="results-section hidden">
+                <div id="resultsContainer" class="results-container"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section id="aboutSection" class="about-section hidden">
+        <div class="social-icons-vertical">
+            <a href="#" aria-label="Twitter" class="social-icon">🐦</a>
+            <a href="#" aria-label="Facebook" class="social-icon">📘</a>
+            <a href="#" aria-label="Instagram" class="social-icon">📷</a>
+            <a href="#" aria-label="YouTube" class="social-icon">▶</a>
+        </div>
+        <div class="about-content-wrapper">
+            <h1>ABOUT US</h1>
+            <div class="about-content">
+                <p>Welcome to Our Company! We are a team of passionate individuals dedicated to providing excellent services/products to our customers. Our mission is to <strong>provide the best experience</strong> for people traveling to different destinations around the world. Our values include integrity, innovation, customer satisfaction, and teamwork. We believe in <strong>putting our customers first</strong> and <strong>working together</strong> to achieve our goals. Feel free to explore our website to learn more about what we offer!</p>
+            </div>
+            <div class="team-section">
+                <h2>Our Team</h2>
+                <div class="team-grid">
+                    <div class="team-member">
+                        <div class="team-member-icon">👤</div>
+                        <h3>John Doe</h3>
+                        <p>John is responsible for...</p>
+                        <button class="team-role-btn">CEO</button>
+                    </div>
+                    <div class="team-member">
+                        <div class="team-member-icon">👤</div>
+                        <h3>Celina Thomas</h3>
+                        <p>Celina Thomas is responsible for...</p>
+                        <button class="team-role-btn">Team Lead</button>
+                    </div>
+                    <div class="team-member">
+                        <div class="team-member-icon">👤</div>
+                        <h3>Mike Tysen</h3>
+                        <p>Mike Tysen is responsible for...</p>
+                        <button class="team-role-btn">Delivery Head</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Us Section -->
+    <section id="contactSection" class="contact-section hidden">
+        <div class="social-icons-vertical">
+            <a href="#" aria-label="Twitter" class="social-icon">🐦</a>
+            <a href="#" aria-label="Facebook" class="social-icon">📘</a>
+            <a href="#" aria-label="Instagram" class="social-icon">📷</a>
+            <a href="#" aria-label="YouTube" class="social-icon">▶</a>
+        </div>
+        <div class="contact-content-wrapper">
+            <div class="contact-left">
+                <h1>CONTACT US</h1>
+                <p class="contact-subtitle">Get in touch.</p>
+            </div>
+            <div class="contact-right">
+                <form class="contact-form" onsubmit="handleSubmit(event)">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" placeholder="Enter your name." required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" placeholder="Enter your email." required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" placeholder="Enter your message." required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-submit">Submit</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+
+    <script src="travel_recommendation.js"></script>
+</body>
+</html>
+

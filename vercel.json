@@ -1,0 +1,9 @@
+{
+  "rewrites": [
+    {
+      "source": "/",
+      "destination": "/travel_recommendation.html"
+    }
+  ]
+}
+
